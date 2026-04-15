@@ -271,7 +271,7 @@
 <nav id="main-nav" class="fixed top-0 w-full z-50 border-b border-transparent transition-all duration-300 bg-neutral-950/80 backdrop-blur-xl">
   <div class="mx-auto flex h-16 w-full max-w-screen-2xl items-center justify-between px-6 md:px-8">
     <a href="#" class="flex items-center">
-      <img src="images/BonBern_OG_Logo.svg" alt="BonBern" class="h-6 md:h-8 w-auto object-contain" />
+      <img src="logo.png" alt="BonBern" class="h-6 md:h-8 w-auto object-contain" />
     </a>
     <!-- Desktop Navigation Links -->
     <div class="hidden md:flex items-center justify-center gap-2 font-headline uppercase text-xs tracking-widest font-bold">
@@ -402,7 +402,7 @@
           <span class="material-symbols-outlined text-[16px]">link</span>
       </a>
       
-      <button class="footer-glass-pill bg-[#ff3b30] text-white px-6 py-2.5 rounded-full hover:bg-red-500 transition-colors font-headline font-bold uppercase tracking-widest text-xs shadow-[0_0_15px_rgba(255,59,48,0.3)] hover:shadow-[0_0_20px_rgba(255,59,48,0.5)] border border-primary/20 ml-2">
+      <button class="bg-black text-white px-6 py-2.5 rounded-full font-headline font-bold uppercase tracking-widest text-xs shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center border border-white/10 ml-2 cursor-pointer">
          Get Started
       </button>
     </div>
@@ -460,7 +460,7 @@
                <span class="material-symbols-outlined text-lg">photo_camera</span>
             </a>
          </div>
-         <button class="w-full py-4 rounded-full footer-glass-pill bg-[#ff3b30] border border-primary/20 text-white font-headline uppercase text-sm tracking-widest font-bold shadow-[0_0_15px_rgba(255,59,48,0.3)]">Get Started</button>
+         <button class="w-full py-4 bg-black text-white rounded-full font-headline font-bold uppercase tracking-widest text-sm shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center border border-white/10 cursor-pointer">Get Started</button>
       </div>
    </div>
 </div>
@@ -469,7 +469,7 @@
 <section class="relative w-full h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
 <!-- Video Background -->
 <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
-<source src="https://framerusercontent.com/assets/MhJj00BslG6TPcvnyXxLbsnFOM.mp4" type="video/mp4" />
+<source src="images/Enhanced Clipify Eye TV.mp4" type="video/mp4" />
 </video>
 
 <!-- Video Matte Overlay (darkens and slightly blurs for legibility) -->
@@ -478,7 +478,7 @@
 
 <!-- Centered Logo (Responsive width, centered dynamically via flexbox) -->
 <div class="relative z-10 w-[80%] max-w-sm md:max-w-[600px] lg:max-w-[800px] flex items-center justify-center">
-<img src="images/BonBern_OG_Logo.svg" alt="BonBern Think Tank Labs" class="w-full h-auto drop-shadow-[0_0_30px_rgba(0,0,0,0.8)]" />
+<img src="logo.png" alt="BonBern Think Tank Labs" class="w-full h-auto drop-shadow-[0_0_30px_rgba(0,0,0,0.8)]" />
 </div>
 
 <!-- Bottom Chevron pointing to scroll -->
@@ -486,58 +486,95 @@
 <span class="material-symbols-outlined text-4xl text-neutral-400 font-light cursor-pointer hover:text-white transition-colors" style="font-variation-settings: 'wght' 200;">expand_more</span>
 </div>
 </section>
-<!-- Perception Section: Blurred Atmospheric -->
-<section class="relative min-h-[1024px] flex items-center justify-center py-24 px-4 overflow-hidden bg-surface-container-lowest" data-stitch-vh="min-h-[1024px]===min-h-screen">
-<!-- Background "Video" Placeholder -->
-<div class="absolute inset-0 z-0">
-<img alt="cinematic slow motion liquid ink swirling in dark water with deep red and charcoal highlights moody atmosphere" class="w-full h-full object-cover blur-2xl opacity-40 scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXk1WKWTShHOp-gIn0C_PXhCvL_jbpyDiZeauVEcvf3xjHG24EKlE5tIfsFO6S2GS3FtcY01dqZdw_QKQz36skLU8zABLUx4JNf5mZMtIUXLFQkm19zyKYSx8ocXPdkQ_Bt9asxap8kaQ16lvh6uxuy-6hqPoj8Oq08nKeFyOi_AuNqLoJkgFl5YhCQVko3yT9CSrYkquQOpFR-LBTsKyEbTukWKGiJ3vgjKKM2HAWvPu2OtaaPIYnKwLiFwsOGeDavuoeS0-py6I"/>
-<div class="absolute inset-0 bg-neutral-950/60 backdrop-blur-md"></div>
+
+<!-- ===== COSMOS SPECTRUM SCROLL TRANSITION ===== -->
+<!-- Scroll-trigger spacer: user scrolls through this to drive the animation -->
+<div id="cosmos-trigger" class="relative h-[250vh] bg-[#050505]">
+  <!-- Scroll hint -->
+  <div id="cosmos-scroll-hint" class="fixed bottom-10 left-1/2 -translate-x-1/2 z-[45] text-xs uppercase tracking-[0.4em] text-white/50 font-label pointer-events-none" style="will-change: opacity;"></div>
 </div>
-<!-- Content Container -->
-<div class="z-10 w-full max-w-4xl bg-surface-variant/20 border border-outline-variant/15 p-12 md:p-24 backdrop-blur-3xl relative">
-<div class="absolute -top-4 -left-4 w-12 h-12 border-t-2 border-l-2 border-primary-container"></div>
-<div class="absolute -bottom-4 -right-4 w-12 h-12 border-b-2 border-r-2 border-primary-container"></div>
-<h2 class="text-4xl md:text-6xl font-headline font-bold tracking-tighter text-center leading-tight">
-                WE SHAPE <span class="text-mask-noir uppercase">PERCEPTION.</span> <br/>
-                WE INFLUENCE <span class="italic">CULTURE.</span> <br/>
-                WE SOLVE REAL-WORLD <span class="text-primary">PROBLEMS.</span>
-</h2>
-<div class="mt-16 flex justify-center">
-<button class="group flex items-center gap-4 font-label uppercase tracking-widest text-sm hover:text-primary transition-colors cursor-pointer">
-                    Explore the framework
-                    <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
-</button>
+
+<!-- Fixed SVG layer that animates during scroll (lives outside flow) -->
+<div id="cosmos-svg-wrap" class="fixed bottom-0 left-0 right-0 h-screen pointer-events-none z-[12] opacity-0" style="will-change: transform, opacity;">
+  <div id="cosmos-svg-container" class="absolute bottom-0 left-0 right-0 h-screen" style="transform-origin: bottom; transform: scaleY(0.05) translateY(-30px); will-change: transform;">
+    <svg class="w-full h-full" viewBox="0 0 1567 584" preserveAspectRatio="none" fill="none">
+      <g clip-path="url(#cosmosClip)" filter="url(#cosmosBlur)">
+        <path d="M1219 584H1393V184H1219V584Z" fill="url(#cg0)" />
+        <path d="M1045 584H1219V104H1045V584Z" fill="url(#cg1)" />
+        <path d="M348 584H174L174 184H348L348 584Z" fill="url(#cg2)" />
+        <path d="M522 584H348L348 104H522L522 584Z" fill="url(#cg3)" />
+        <path d="M697 584H522L522 54H697L697 584Z" fill="url(#cg4)" />
+        <path d="M870 584H1045V54H870V584Z" fill="url(#cg5)" />
+        <path d="M870 584H697L697 0H870L870 584Z" fill="url(#cg6)" />
+        <path d="M174 585H0L0 295H174L174 585Z" fill="url(#cg7)" />
+        <path d="M1393 584H1567V294H1393V584Z" fill="url(#cg8)" />
+      </g>
+      <defs>
+        <filter id="cosmosBlur" x="-30" y="-30" width="1627" height="644" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="bg"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="bg" result="shape"/>
+          <feGaussianBlur stdDeviation="15" result="blur"/>
+        </filter>
+        <linearGradient id="cg0" x1="50%" y1="100%" x2="50%" y2="0%" gradientUnits="userSpaceOnUse"><stop stop-color="#340B05"/><stop offset=".183" stop-color="#0358F7"/><stop offset=".284" stop-color="#5092C7"/><stop offset=".413" stop-color="#E1ECFE"/><stop offset=".587" stop-color="#FFD400"/><stop offset=".683" stop-color="#FA3D1D"/><stop offset=".803" stop-color="#FD02F5"/><stop offset="1" stop-color="#FFC0FD" stop-opacity="0"/></linearGradient>
+        <linearGradient id="cg1" x1="50%" y1="100%" x2="50%" y2="0%" gradientUnits="userSpaceOnUse"><stop stop-color="#340B05"/><stop offset=".183" stop-color="#0358F7"/><stop offset=".284" stop-color="#5092C7"/><stop offset=".413" stop-color="#E1ECFE"/><stop offset=".587" stop-color="#FFD400"/><stop offset=".683" stop-color="#FA3D1D"/><stop offset=".803" stop-color="#FD02F5"/><stop offset="1" stop-color="#FFC0FD" stop-opacity="0"/></linearGradient>
+        <linearGradient id="cg2" x1="50%" y1="100%" x2="50%" y2="0%" gradientUnits="userSpaceOnUse"><stop stop-color="#340B05"/><stop offset=".183" stop-color="#0358F7"/><stop offset=".284" stop-color="#5092C7"/><stop offset=".413" stop-color="#E1ECFE"/><stop offset=".587" stop-color="#FFD400"/><stop offset=".683" stop-color="#FA3D1D"/><stop offset=".803" stop-color="#FD02F5"/><stop offset="1" stop-color="#FFC0FD" stop-opacity="0"/></linearGradient>
+        <linearGradient id="cg3" x1="50%" y1="100%" x2="50%" y2="0%" gradientUnits="userSpaceOnUse"><stop stop-color="#340B05"/><stop offset=".183" stop-color="#0358F7"/><stop offset=".284" stop-color="#5092C7"/><stop offset=".413" stop-color="#E1ECFE"/><stop offset=".587" stop-color="#FFD400"/><stop offset=".683" stop-color="#FA3D1D"/><stop offset=".803" stop-color="#FD02F5"/><stop offset="1" stop-color="#FFC0FD" stop-opacity="0"/></linearGradient>
+        <linearGradient id="cg4" x1="50%" y1="100%" x2="50%" y2="0%" gradientUnits="userSpaceOnUse"><stop stop-color="#340B05"/><stop offset=".183" stop-color="#0358F7"/><stop offset=".284" stop-color="#5092C7"/><stop offset=".413" stop-color="#E1ECFE"/><stop offset=".587" stop-color="#FFD400"/><stop offset=".683" stop-color="#FA3D1D"/><stop offset=".803" stop-color="#FD02F5"/><stop offset="1" stop-color="#FFC0FD" stop-opacity="0"/></linearGradient>
+        <linearGradient id="cg5" x1="50%" y1="100%" x2="50%" y2="0%" gradientUnits="userSpaceOnUse"><stop stop-color="#340B05"/><stop offset=".183" stop-color="#0358F7"/><stop offset=".284" stop-color="#5092C7"/><stop offset=".413" stop-color="#E1ECFE"/><stop offset=".587" stop-color="#FFD400"/><stop offset=".683" stop-color="#FA3D1D"/><stop offset=".803" stop-color="#FD02F5"/><stop offset="1" stop-color="#FFC0FD" stop-opacity="0"/></linearGradient>
+        <linearGradient id="cg6" x1="50%" y1="100%" x2="50%" y2="0%" gradientUnits="userSpaceOnUse"><stop stop-color="#340B05"/><stop offset=".183" stop-color="#0358F7"/><stop offset=".284" stop-color="#5092C7"/><stop offset=".413" stop-color="#E1ECFE"/><stop offset=".587" stop-color="#FFD400"/><stop offset=".683" stop-color="#FA3D1D"/><stop offset=".803" stop-color="#FD02F5"/><stop offset="1" stop-color="#FFC0FD" stop-opacity="0"/></linearGradient>
+        <linearGradient id="cg7" x1="50%" y1="100%" x2="50%" y2="0%" gradientUnits="userSpaceOnUse"><stop stop-color="#340B05"/><stop offset=".183" stop-color="#0358F7"/><stop offset=".284" stop-color="#5092C7"/><stop offset=".413" stop-color="#E1ECFE"/><stop offset=".587" stop-color="#FFD400"/><stop offset=".683" stop-color="#FA3D1D"/><stop offset=".803" stop-color="#FD02F5"/><stop offset="1" stop-color="#FFC0FD" stop-opacity="0"/></linearGradient>
+        <linearGradient id="cg8" x1="50%" y1="100%" x2="50%" y2="0%" gradientUnits="userSpaceOnUse"><stop stop-color="#340B05"/><stop offset=".183" stop-color="#0358F7"/><stop offset=".284" stop-color="#5092C7"/><stop offset=".413" stop-color="#E1ECFE"/><stop offset=".587" stop-color="#FFD400"/><stop offset=".683" stop-color="#FA3D1D"/><stop offset=".803" stop-color="#FD02F5"/><stop offset="1" stop-color="#FFC0FD" stop-opacity="0"/></linearGradient>
+        <clipPath id="cosmosClip"><rect width="1567" height="584" fill="white"/></clipPath>
+      </defs>
+    </svg>
+  </div>
+  <!-- Content box revealed at peak of scroll animation -->
+  <div id="cosmos-main-title" class="absolute bottom-[12%] left-1/2 -translate-x-1/2 z-20 opacity-0 w-[90%] max-w-4xl pointer-events-auto" style="will-change: opacity, transform;">
+    <div class="bg-black/40 border border-white/10 p-12 md:p-24 backdrop-blur-2xl relative rounded-[3rem] shadow-2xl">
+      <div class="absolute -top-4 -left-4 w-12 h-12 border-t-2 border-l-2 border-primary-container"></div>
+      <div class="absolute -bottom-4 -right-4 w-12 h-12 border-b-2 border-r-2 border-primary-container"></div>
+      <h2 class="text-4xl md:text-6xl font-headline font-bold tracking-tighter text-center leading-tight text-white drop-shadow-2xl">
+        WE SHAPE <span class="bg-gradient-to-r from-white to-white/40 bg-clip-text text-transparent uppercase">PERCEPTION.</span> <br/>
+        WE INFLUENCE <span class="italic text-neutral-400">CULTURE.</span> <br/>
+        WE SOLVE REAL-WORLD <span class="text-primary tracking-widest">PROBLEMS.</span>
+      </h2>
+      <div class="mt-16 flex justify-center">
+        <button class="bg-black text-white px-10 py-5 rounded-full font-headline font-bold uppercase tracking-widest text-sm shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer border border-white/10 mx-auto group">
+          Explore the framework
+          <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</section>
 <!-- About Us Section: Two-Column Editorial -->
-<section class="py-32 px-8 md:px-24 bg-surface max-w-screen-2xl mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-start">
+<section class="py-32 px-8 md:px-24 bg-transparent max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
 <!-- Manifesto Column -->
 <div class="space-y-12">
 <div class="space-y-4">
-<p class="font-label text-primary-container uppercase tracking-widest">01 / Manifesto</p>
-<h3 class="text-5xl font-headline font-black tracking-tighter uppercase leading-none">ABOUT US</h3>
+<p class="font-label text-primary-container uppercase tracking-widest">01 / ABOUT US</p>
+<h3 class="text-5xl font-headline font-black tracking-tighter uppercase leading-none text-white">What we do?</h3>
 </div>
-<div class="space-y-8 text-lg md:text-xl leading-relaxed text-on-surface-variant font-light">
+<div class="space-y-8 text-lg md:text-xl leading-relaxed text-neutral-400 font-light">
 <p>
-                        At BonBern, we don't just design interfaces; we construct mental environments. Our approach is <span class="text-primary-container font-bold italic">behavior-first</span>, identifying the psychological levers that drive user decision-making before a single pixel is placed.
+                        At BonBern, we don't just design interfaces; we construct mental environments. Our approach is <span class="text-white font-bold italic">behavior-first</span>, identifying the psychological levers that drive user decision-making before a single pixel is placed.
                     </p>
 <p>
                         We believe that every brand is a protagonist in its own noir thriller. We provide the lighting, the shadows, and the script that turns a passive viewer into an active participant in your narrative.
                     </p>
 </div>
 <div class="pt-8">
-<a class="inline-block border-b-2 border-primary-container pb-2 font-headline font-bold uppercase tracking-widest text-sm hover:text-primary transition-colors cursor-pointer" href="#">Read the full manifesto</a>
+<a class="bg-black text-white px-10 py-5 rounded-full font-headline font-bold uppercase tracking-widest text-sm shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 inline-flex items-center justify-center gap-3 cursor-pointer border border-white/10" href="#">Read the full manifesto</a>
 </div>
 </div>
 <!-- Media Column -->
-<div class="relative group">
-<div class="aspect-[4/5] overflow-hidden bg-surface-container-highest cursor-pointer">
+<div class="relative group flex justify-center items-center">
+<div class="aspect-[4/5] w-[80%] overflow-hidden rounded-[2.5rem] cursor-pointer border border-white/10 relative z-10 shadow-2xl">
 <img alt="dramatic low-angle shot of a brutalist concrete building against a dark stormy sky sharp shadows and high contrast editorial style" class="w-full h-full object-cover grayscale brightness-75 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWiZMnbkvi6dQvg-GA83CnsuoMmp3dj5spT8nP56Ljf4xOgFJpTVPU00EeVFPSY1mbe14djD7cAJII93EiWYVU_2vo5unE0ZF3qF5BqizHHwGqb_186yKy-oepZMGxa2y4XArEMhiWl1VbrKg6BJnsQ8wOycP7PlwXXam1r0ag4ZX80R_t38qRoDsI8ePBpE_zvIjLUYE4gQPvEiMf415eluaFmi0RKqiPhW057uliN-b1o-x3QnApt-AkQXfA_aHpoT8QWmTTdEE"/>
 </div>
-<div class="absolute -bottom-8 -left-8 bg-surface-container-low p-8 hidden lg:block">
-<span class="text-6xl font-headline font-black text-outline-variant/30">1994</span>
+<div class="absolute -bottom-8 left-4 lg:left-8 glass-card px-8 py-6 rounded-3xl hidden md:block z-20 border border-white/10 shadow-xl">
+<span class="text-5xl font-headline font-black text-white/40 tracking-tighter">Since 2006</span>
 </div>
 </div>
 </div>
@@ -1090,6 +1127,86 @@
                 btn.addEventListener('mouseleave', () => {
                     gsap.to(btn, { x: 0, y: 0, rotationX: 0, rotationY: 0, scale: 1, ease: "elastic.out(1, 0.3)", duration: 1.2 });
                 });
+            });
+        }
+
+        // --- Cosmos Spectrum Scroll Animation ---
+        const cosmosTrigger = document.getElementById('cosmos-trigger');
+        const cosmosWrap = document.getElementById('cosmos-svg-wrap');
+        const cosmosSvg = document.getElementById('cosmos-svg-container');
+        const cosmosTitle = document.getElementById('cosmos-main-title');
+        const cosmosHint = document.getElementById('cosmos-scroll-hint');
+
+        if (cosmosTrigger && cosmosWrap && cosmosSvg && typeof gsap !== 'undefined') {
+            // Build "SCROLL TO EXPLORE" with individual letter spans for shimmer
+            const hintText = 'SCROLL TO EXPLORE';
+            if (cosmosHint) {
+                cosmosHint.innerHTML = hintText.split('').map((ch, i) =>
+                    ch === ' ' ? '&nbsp;' : `<span class="cosmos-hint-char" style="display:inline-block;opacity:0.4">${ch}</span>`
+                ).join('');
+                // Letter shimmer animation
+                const hintChars = cosmosHint.querySelectorAll('.cosmos-hint-char');
+                if (hintChars.length) {
+                    gsap.to(hintChars, {
+                        opacity: 1, filter: 'blur(0px)', duration: 0.5,
+                        stagger: { each: 0.06, repeat: -1, yoyo: true },
+                        ease: 'sine.inOut', delay: 0.5
+                    });
+                }
+            }
+
+            // Main scroll-driven timeline
+            const cosmosTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: cosmosTrigger,
+                    start: 'top bottom',
+                    end: 'bottom bottom',
+                    scrub: 1,
+                    onUpdate: function(self) {
+                        // Show/hide the fixed SVG layer based on progress
+                        if (self.progress > 0.01 && self.progress < 0.99) {
+                            cosmosWrap.style.opacity = '1';
+                            if (cosmosHint) cosmosHint.style.opacity = '1';
+                        } else {
+                            cosmosWrap.style.opacity = '0';
+                            if (cosmosHint) cosmosHint.style.opacity = '0';
+                        }
+                    }
+                }
+            });
+
+            // Phase 1 (0 → 0.3): SVG appears compressed at bottom, starts to expand
+            cosmosTl.to(cosmosSvg, {
+                transform: 'scaleY(0.05) translateY(-30px)',
+                duration: 0.3, ease: 'power2.out'
+            }, 0);
+
+            // Phase 2 (0.3 → 1.0): SVG expands to full height
+            cosmosTl.to(cosmosSvg, {
+                transform: 'scaleY(1) translateY(0px)',
+                duration: 0.7, ease: 'power2.out'
+            }, 0.3);
+
+            // Fade in center title at peak
+            cosmosTl.to(cosmosTitle, {
+                opacity: 1, y: 0, filter: 'blur(0px)',
+                duration: 0.3, ease: 'power2.out'
+            }, 0.7);
+
+            // Fade out hint during expansion
+            if (cosmosHint) {
+                cosmosTl.to(cosmosHint, {
+                    opacity: 0, duration: 0.4, ease: 'power2.out'
+                }, 0.5);
+            }
+
+            // Hide the cosmos layer once user scrolls past the trigger zone
+            ScrollTrigger.create({
+                trigger: cosmosTrigger,
+                start: 'bottom bottom',
+                end: 'bottom top',
+                onLeave: () => { cosmosWrap.style.opacity = '0'; },
+                onEnterBack: () => { cosmosWrap.style.opacity = '1'; }
             });
         }
     });
