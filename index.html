@@ -250,6 +250,41 @@
           box-shadow: 0 20px 40px -10px rgba(0,0,0,0.9), inset 0 1px 1px rgba(255,255,255,0.2);
           color: #ffffff;
         }
+
+        /* Feature Carousel CSS */
+        .product-chip {
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .product-chip.active {
+            background: white;
+            color: #131313;
+            border-color: white;
+            transform: scale(1.05);
+        }
+        .product-card {
+            position: absolute;
+            inset: 0;
+            border-radius: 2.5rem;
+            overflow: hidden;
+            border: 4px solid #131313;
+            background: #131313;
+            transform-origin: center;
+            will-change: transform, opacity;
+            transition: border-color 0.3s ease;
+        }
+        .product-card.active { border-color: rgba(255, 255, 255, 0.1); }
+        .product-card img {
+            width: 100%;
+            height: 100%;
+            object-cover: cover;
+            transition: all 0.7s ease;
+        }
+        .product-card:not(.active) img {
+            filter: grayscale(1) blur(2px) brightness(0.5);
+        }
+        .product-gradient-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 40%, transparent 100%);
+        }
     </style>
 </head>
 <body class="font-body selection:bg-primary-container selection:text-on-primary-container overflow-hidden">
@@ -300,22 +335,22 @@
                     <span class="text-neutral-500 text-[10px] tracking-normal font-body normal-case mt-0.5">Analyze hidden signals.</span>
                  </div>
               </a>
-              <a href="#" class="flex flex-row gap-3 items-center p-3 rounded-lg hover:bg-white/5 transition-colors group/item">
+              <a href="#products-section" class="flex flex-row gap-3 items-center p-3 rounded-lg hover:bg-white/5 transition-colors group/item">
                  <div class="bg-black border border-white/10 w-10 h-10 flex items-center justify-center rounded-md text-neutral-400 group-hover/item:text-white shadow">
-                    <span class="material-symbols-outlined text-[20px]">campaign</span>
+                    <span class="material-symbols-outlined text-[20px]">road</span>
                  </div>
                  <div class="flex flex-col">
-                    <span class="text-white text-xs font-bold uppercase tracking-wider">Product Alpha</span>
-                    <span class="text-neutral-500 text-[10px] tracking-normal font-body normal-case mt-0.5">Core software layer.</span>
+                    <span class="text-white text-xs font-bold uppercase tracking-wider">Better Roads</span>
+                    <span class="text-neutral-500 text-[10px] tracking-normal font-body normal-case mt-0.5">Infrastructure of movement.</span>
                  </div>
               </a>
-              <a href="#" class="flex flex-row gap-3 items-center p-3 rounded-lg hover:bg-white/5 transition-colors group/item">
+              <a href="#products-section" class="flex flex-row gap-3 items-center p-3 rounded-lg hover:bg-white/5 transition-colors group/item">
                  <div class="bg-black border border-white/10 w-10 h-10 flex items-center justify-center rounded-md text-neutral-400 group-hover/item:text-white shadow">
-                    <span class="material-symbols-outlined text-[20px]">all_inclusive</span>
+                    <span class="material-symbols-outlined text-[20px]">eco</span>
                  </div>
                  <div class="flex flex-col">
-                    <span class="text-white text-xs font-bold uppercase tracking-wider">Product Beta</span>
-                    <span class="text-neutral-500 text-[10px] tracking-normal font-body normal-case mt-0.5">Automated signal scaling.</span>
+                    <span class="text-white text-xs font-bold uppercase tracking-wider">CollabReen</span>
+                    <span class="text-neutral-500 text-[10px] tracking-normal font-body normal-case mt-0.5">Synchronized sustainability.</span>
                  </div>
               </a>
            </div>
@@ -529,7 +564,7 @@
     </svg>
   </div>
   <!-- Content box revealed at peak of scroll animation -->
-  <div id="cosmos-main-title" class="absolute bottom-[12%] left-1/2 -translate-x-1/2 z-20 opacity-0 w-[90%] max-w-4xl pointer-events-auto" style="will-change: opacity, transform;">
+  <div id="cosmos-main-title" class="absolute bottom-[12%] left-1/2 -translate-x-1/2 z-20 opacity-0 w-[90%] max-w-4xl pointer-events-none" style="will-change: opacity, transform;">
     <div class="bg-black/40 border border-white/10 p-12 md:p-24 backdrop-blur-2xl relative rounded-[3rem] shadow-2xl">
       <div class="absolute -top-4 -left-4 w-12 h-12 border-t-2 border-l-2 border-primary-container"></div>
       <div class="absolute -bottom-4 -right-4 w-12 h-12 border-b-2 border-r-2 border-primary-container"></div>
@@ -539,10 +574,10 @@
         WE SOLVE REAL-WORLD <span class="text-primary tracking-widest">PROBLEMS.</span>
       </h2>
       <div class="mt-16 flex justify-center">
-        <button class="bg-black text-white px-10 py-5 rounded-full font-headline font-bold uppercase tracking-widest text-sm shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer border border-white/10 mx-auto group">
+        <a href="mailto:hello@bonbern.com" class="bg-black text-white px-10 py-5 rounded-full font-headline font-bold uppercase tracking-widest text-sm shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer border border-white/10 mx-auto group">
           Explore the framework
           <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
-        </button>
+        </a>
       </div>
     </div>
   </div>
@@ -565,7 +600,7 @@
                     </p>
 </div>
 <div class="pt-8">
-<a class="bg-black text-white px-10 py-5 rounded-full font-headline font-bold uppercase tracking-widest text-sm shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 inline-flex items-center justify-center gap-3 cursor-pointer border border-white/10" href="#">Read the full manifesto</a>
+<a class="bg-black text-white px-10 py-5 rounded-full font-headline font-bold uppercase tracking-widest text-sm shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 inline-flex items-center justify-center gap-3 cursor-pointer border border-white/10" href="mailto:hello@bonbern.com">Read the full manifesto</a>
 </div>
 </div>
 <!-- Media Column -->
@@ -611,7 +646,7 @@
 <div class="absolute inset-0 z-0">
 <img alt="Label representation" class="card-image w-full h-full object-cover brightness-75 transition-transform duration-700 ease-out grayscale hover:grayscale-0" src="https://lh3.googleusercontent.com/aida/ADBb0uh19crxJpoh70Mg3QHj-HIYwnbqFGtmBjYjoDdgiA6ZLu-IkftB4AeoBP632PKK0B5pQxxko7SWWC2gy1-MyTyBni0jWWnFZWeRAxjo4asc2I57YWKH7AwmCmMTZcrHD5W3uQzO1A61AIGm0tyimaBnAVAIIWAukRx68xRn_mXB2a0eu1i_ef6vN1LnCnPB9rEAAeRiQ5FwcDe4ZXxt2kgHWlJTwbLuS8R5YH_UhNSeuPDv4GSaSYklFVMNUiWgrHPptJHhLxIX"/>
 </div>
-<div class="relative z-10 flex h-full w-full">
+<div class="relative z-10 flex h-full">
 <div class="vertical-label font-headline font-black text-4xl md:text-5xl text-neutral-900/40 uppercase tracking-tighter self-start pt-4">#LABELS</div>
 <div class="card-content flex flex-col justify-end ml-auto text-right transition-all duration-500 transform translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100">
 <ul class="space-y-2 text-white font-headline text-2xl font-bold uppercase tracking-tight">
@@ -629,7 +664,7 @@
 <div class="absolute inset-0 z-0">
 <img alt="Brand representation" class="card-image w-full h-full object-cover brightness-75 transition-transform duration-700 ease-out grayscale hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZOPNPAUwxBXApXPAbxwJv8ZLNNpeFqN5hTvKMD3rS7O14hyQGfLK6fk5pMY034H4IJ2xik7J_biotLuNl6BRBd9UfcIOOcq-kqcdICIFKYQlV_GoaxE1SE-YxynGtSUW4FdFPXgzcxlbpEYo_bAUgYHDbwrjFZ6bmmbM86IZCQrjDGkAha7EZTFd91BqXeze5useDyTnSzeWZu4NYQUkyQR80G5c53GAx0yixkFU6AfukVtcn0HR6BU-GO3W4CLQpWC5B-AhXlEI"/>
 </div>
-<div class="relative z-10 flex h-full w-full">
+<div class="relative z-10 flex h-full">
 <div class="vertical-label font-headline font-black text-4xl md:text-5xl text-neutral-900/40 uppercase tracking-tighter self-start pt-4">#BRANDS</div>
 <div class="card-content flex flex-col justify-end ml-auto text-right transition-all duration-500 transform translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100">
 <ul class="space-y-2 text-white font-headline text-2xl font-bold uppercase tracking-tight">
@@ -643,6 +678,37 @@
 </div>
 </div>
 </div>
+</section>
+
+<!-- Products Feature Carousel Section -->
+<section id="products-section" class="py-12 lg:py-16 bg-surface-dim overflow-hidden">
+  <div class="w-[96%] max-w-[1600px] mx-auto px-4 md:px-6">
+    <div class="relative overflow-hidden rounded-[2.5rem] lg:rounded-[4rem] flex flex-col lg:flex-row min-h-[75vh] lg:h-[85vh] border border-white/5 bg-[#0a0a0a] shadow-2xl">
+      
+      <!-- Left: Chip Navigation -->
+      <div class="w-full lg:w-[40%] relative z-30 flex flex-col items-center justify-center p-12 lg:p-16 bg-gradient-to-br from-neutral-900 to-black border-b lg:border-b-0 lg:border-r border-white/5">
+        <div class="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/40 to-transparent z-40 pointer-events-none"></div>
+        <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/40 to-transparent z-40 pointer-events-none"></div>
+        
+        <div class="mb-12 text-center lg:text-left w-full">
+            <p class="font-label text-primary uppercase tracking-[0.4em] text-[10px] mb-4">Case Studies</p>
+            <h2 class="text-3xl md:text-4xl font-headline font-black tracking-tighter uppercase text-white">Our Ecosystem</h2>
+        </div>
+
+        <div id="product-chips-container" class="relative w-full flex flex-col gap-4 items-center lg:items-start">
+          <!-- Chips will be injected via JS -->
+        </div>
+      </div>
+
+      <!-- Right: Card Display -->
+      <div class="flex-1 relative flex items-center justify-center p-8 lg:p-16 overflow-hidden">
+        <div id="product-cards-container" class="relative w-full max-w-[420px] aspect-[4/5]">
+          <!-- Cards will be injected via JS -->
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 <!-- Dream Team Section -->
 <section class="py-32 relative overflow-hidden bg-[#050505]" id="team">
@@ -751,10 +817,10 @@
             Whether you’re building an image, launching a movement, or solving a perception problem — we’re here to think it through with you.
         </p>
 <div class="flex flex-col items-center gap-10">
-<button class="bg-black text-white px-10 py-5 rounded-full font-headline font-bold uppercase tracking-widest text-sm shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-3 cursor-pointer">
+<a href="mailto:hello@bonbern.com" class="bg-black text-white px-10 py-5 rounded-full font-headline font-bold uppercase tracking-widest text-sm shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-3 cursor-pointer">
                 Start a Conversation
                 <span class="material-symbols-outlined text-lg">arrow_forward</span>
-</button>
+</a>
 <div class="w-full max-w-lg relative group">
 <input id="cta-chat-input" class="w-full bg-white text-neutral-900 px-8 py-5 rounded-2xl shadow-2xl focus:ring-0 border-none placeholder:text-neutral-400 font-body text-base pr-16 transition-all duration-300" placeholder="Tell us what you're thinking..." type="text"/>
 <button id="cta-chat-submit" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-neutral-100 rounded-xl flex items-center justify-center hover:bg-neutral-200 transition-colors cursor-pointer">
@@ -818,7 +884,7 @@
   </div>
 </div>
 <!-- Cinematic Footer Replacement -->
-<div id="footer-wrapper" class="relative h-screen w-full font-body overflow-hidden -mt-10" style="clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%); z-index: 0;">
+<div id="footer-wrapper" class="relative h-screen w-full font-body overflow-hidden -mt-10" style="clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%); z-index: 30;">
   <footer class="fixed bottom-0 left-0 flex h-screen w-full flex-col justify-between overflow-hidden bg-neutral-950 text-[#e2e2e2] cinematic-footer-wrapper">
     <!-- Ambient Light & Grid -->
     <div class="footer-aurora absolute left-1/2 top-1/2 h-[60vh] w-[80vw] -translate-x-1/2 -translate-y-1/2 animate-footer-breathe rounded-full blur-[80px] pointer-events-none z-0"></div>
@@ -857,10 +923,10 @@
 
       <div id="footer-links" class="flex flex-col items-center gap-6 w-full opacity-0 translate-y-8">
         <div class="flex flex-wrap justify-center gap-4 w-full">
-          <a href="#" class="magnetic-btn footer-glass-pill px-10 py-5 rounded-full text-white font-bold text-sm md:text-base flex items-center gap-3 group uppercase tracking-widest font-label cursor-pointer shadow-lg outline-none">
+          <a href="mailto:hello@bonbern.com" class="magnetic-btn footer-glass-pill px-10 py-5 rounded-full text-white font-bold text-sm md:text-base flex items-center gap-3 group uppercase tracking-widest font-label cursor-pointer shadow-lg outline-none">
              Start a Conversation
           </a>
-          <a href="#" class="magnetic-btn footer-glass-pill px-10 py-5 rounded-full text-white font-bold text-sm md:text-base flex items-center gap-3 group uppercase tracking-widest font-label cursor-pointer shadow-lg outline-none">
+          <a href="#about-us-anchor" class="magnetic-btn footer-glass-pill px-10 py-5 rounded-full text-white font-bold text-sm md:text-base flex items-center gap-3 group uppercase tracking-widest font-label cursor-pointer shadow-lg outline-none">
              View Our Manifesto
           </a>
         </div>
@@ -1167,9 +1233,12 @@
                         if (self.progress > 0.01 && self.progress < 0.99) {
                             cosmosWrap.style.opacity = '1';
                             if (cosmosHint) cosmosHint.style.opacity = '1';
+                            // Only allow clicks when the content is actually visible
+                            cosmosTitle.style.pointerEvents = self.progress > 0.7 ? 'auto' : 'none';
                         } else {
                             cosmosWrap.style.opacity = '0';
                             if (cosmosHint) cosmosHint.style.opacity = '0';
+                            cosmosTitle.style.pointerEvents = 'none';
                         }
                     }
                 }
@@ -1190,7 +1259,9 @@
             // Fade in center title at peak
             cosmosTl.to(cosmosTitle, {
                 opacity: 1, y: 0, filter: 'blur(0px)',
-                duration: 0.3, ease: 'power2.out'
+                duration: 0.3, ease: 'power2.out',
+                onStart: () => { cosmosTitle.style.pointerEvents = 'auto'; },
+                onReverseComplete: () => { cosmosTitle.style.pointerEvents = 'none'; }
             }, 0.7);
 
             // Fade out hint during expansion
@@ -1209,6 +1280,136 @@
                 onEnterBack: () => { cosmosWrap.style.opacity = '1'; }
             });
         }
+        // --- Products Feature Carousel Logic ---
+        const PRODUCTS = [
+            {
+                id: "better-roads",
+                label: "Better Roads",
+                icon: "road",
+                image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1200",
+                description: "Designing the infrastructure of movement and community behavior."
+            },
+            {
+                id: "collabreen",
+                label: "CollabReen",
+                icon: "eco",
+                image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200",
+                description: "Synchronized sustainability through collective psychological shift."
+            },
+            {
+                id: "bhagwan-bharose",
+                label: "Bhagwan Bharose",
+                icon: "verified_user",
+                image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200",
+                description: "The architecture of trust in decentralized narratives."
+            }
+        ];
+
+        let currentProductIndex = 0;
+        const chipsContainer = document.getElementById('product-chips-container');
+        const cardsContainer = document.getElementById('product-cards-container');
+
+        function initProducts() {
+            if (!chipsContainer || !cardsContainer) return;
+
+            // Render Chips
+            PRODUCTS.forEach((product, index) => {
+                const btn = document.createElement('button');
+                btn.className = `product-chip w-full max-w-xs px-8 py-4 rounded-full border border-white/10 text-white/50 text-left flex items-center gap-4 group hover:border-white/30 transition-all font-label uppercase tracking-widest text-[11px] ${index === 0 ? 'active' : ''}`;
+                btn.innerHTML = `
+                    <span class="material-symbols-outlined text-lg ${index === 0 ? 'text-neutral-900' : 'text-primary/60'}">${product.icon}</span>
+                    <span>${product.label}</span>
+                `;
+                btn.onclick = () => setProduct(index);
+                chipsContainer.appendChild(btn);
+
+                // Render Card
+                const card = document.createElement('div');
+                card.className = `product-card ${index === 0 ? 'active' : ''}`;
+                card.style.zIndex = index === 0 ? 20 : 10;
+                card.style.opacity = index === 0 ? 1 : 0;
+                card.style.transform = index === 0 ? 'scale(1) rotate(0deg)' : 'scale(0.8) rotate(5deg)';
+                
+                card.innerHTML = `
+                    <img src="${product.image}" alt="${product.label}">
+                    <div class="product-gradient-overlay absolute inset-0 flex flex-col justify-end p-10 opacity-0 translate-y-4 transition-all duration-500 delay-200">
+                        <div class="bg-white text-neutral-900 px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-[0.2em] w-fit mb-4">
+                            0${index + 1} • ${product.label}
+                        </div>
+                        <p class="text-white text-xl font-headline font-bold leading-tight uppercase tracking-tight">${product.description}</p>
+                    </div>
+                `;
+                cardsContainer.appendChild(card);
+            });
+
+            // Initial visibility for first card content
+            setTimeout(() => {
+                cardsContainer.children[0].querySelector('.product-gradient-overlay').style.opacity = '1';
+                cardsContainer.children[0].querySelector('.product-gradient-overlay').style.transform = 'translateY(0)';
+            }, 500);
+        }
+
+        function setProduct(index) {
+            if (index === currentProductIndex) return;
+
+            const chips = chipsContainer.children;
+            const cards = cardsContainer.children;
+
+            // Update Chips
+            Array.from(chips).forEach((chip, i) => {
+                if (i === index) {
+                    chip.classList.add('active');
+                    chip.querySelector('span').classList.replace('text-primary/60', 'text-neutral-900');
+                } else {
+                    chip.classList.remove('active');
+                    chip.querySelector('span').classList.replace('text-neutral-900', 'text-primary/60');
+                }
+            });
+
+            // Update Cards with GSAP
+            const prevCard = cards[currentProductIndex];
+            const nextCard = cards[index];
+
+            gsap.to(prevCard, {
+                opacity: 0,
+                scale: 0.8,
+                rotate: -5,
+                zIndex: 10,
+                duration: 0.6,
+                ease: "power2.inOut"
+            });
+            prevCard.querySelector('.product-gradient-overlay').style.opacity = '0';
+            prevCard.querySelector('.product-gradient-overlay').style.transform = 'translateY(1rem)';
+
+            gsap.fromTo(nextCard, 
+                { opacity: 0, scale: 1.2, rotate: 5, zIndex: 20 },
+                { opacity: 1, scale: 1, rotate: 0, duration: 0.8, ease: "power3.out" }
+            );
+            
+            setTimeout(() => {
+                nextCard.querySelector('.product-gradient-overlay').style.opacity = '1';
+                nextCard.querySelector('.product-gradient-overlay').style.transform = 'translateY(0)';
+            }, 300);
+
+            currentProductIndex = index;
+        }
+
+        initProducts();
+
+        // Auto-play
+        let productInterval = setInterval(() => {
+            let next = (currentProductIndex + 1) % PRODUCTS.length;
+            setProduct(next);
+        }, 5000);
+
+        chipsContainer.addEventListener('mouseenter', () => clearInterval(productInterval));
+        chipsContainer.addEventListener('mouseleave', () => {
+            productInterval = setInterval(() => {
+                let next = (currentProductIndex + 1) % PRODUCTS.length;
+                setProduct(next);
+            }, 5000);
+        });
+
     });
 </script>
 </body></html>
